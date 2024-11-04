@@ -9,13 +9,14 @@ export default defineConfig({
         react(),
         dts({
             include: 'lib',
-            exclude: 'src',
+            // exclude: ['src', 'cypress'],
         }),
     ],
     resolve: {
         alias: {
             drdtc: resolve(__dirname, 'lib/main.ts'),
             '@': resolve(__dirname, 'src'),
+            '@lib': resolve(__dirname, 'lib'),
         },
     },
     build: {
